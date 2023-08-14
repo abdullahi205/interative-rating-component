@@ -1,57 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Oswald:wght@200&family=Outfit:wght@400;800&family=Overpass:wght@400;700&family=Red+Hat+Display:wght@400;700;900&display=swap');
 *{
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  
 }
 body{
   background-color: hsl(216, 12%, 8%);
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: "overpass" sans-serif;
+  font-size: 15px;
   color: white;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+  margin: 1.5rem;
   min-height: 100vh;
 }
-.card{
+button{
+  font-family: inherit;
+}
+.card, .result{
   background-color: hsl(213, 19%, 18%);
-  padding: 20px;
-  border-radius: 10px;
-  width: 250px;
-  height: 270px;
+  padding:1.5rem;
+  border-radius: 0.625rem;
+  max-width: 400px;
 }
-img{
-  margin-bottom: 30px;
+.card img{
+  background-color: hsl(213, 20%, 22%);
+  padding: 0.5rem;
+  border-radius: 50%;
 }
-p{
-  font-size: 15px;
-  font-weight: 400;
-  opacity: 0.4;
-  margin-bottom: 15px;
+.card .text{
+  color: hsl(217, 12%, 63%);
+  margin-bottom: 1rem;
 }
-h3{
-  font-weight: 700;
-  margin-bottom: 15px;
+.text{
+  line-height: 1.8;
+}
+.card h1{
+  color: #fff;
+  margin: 2rem 0 1rem;
 }
 
-.buttons{
+.card ul{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-bottom: 2rem;
+  
 }
-.numbers{
-  background-color:hsl(216, 12%, 54%) ;
-  width: 2.5rem;
-  height: 2.5rem;
+.card ul li button{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
   border: none;
-  border-radius: 50px;
+  padding-top: 0.2rem;
+  background-color:  hsl(213, 20%, 22%);
+  color: #fff;
   cursor: pointer;
-  opacity: 0.5;
-  color: white;
+  transition: 0.3s;
  
 }
 .submit-btn{
-  background-color: orange;
-  padding: 10px 100px;
-  margin-bottom: 15px;
-  border-radius: 50px;
+  background-color: hsl(25, 97%, 53%);
+  color: #fff;
+  width: 100%;
   border: none;
+  padding: 0.5rem 0 0.4rem;
+  border-radius: 30px;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+.numbers:hover{
+  background-color: hsl(25, 97%, 53%);
+  
+}
+.submit-btn:hover{
+  background-color: white;
+  color: hsl(25, 97%, 53%);
+}
+.numbers:focus{
+  background-color: hsl(217, 12%, 63%);
+ 
+}
+
+.result{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.result img{
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+.result p.gray{
+  background-color: hsl(213, 20%, 22%);
+  border-radius: 30px;
+  color: hsl(25, 97%, 53%);
+  padding: 0.5rem 0.5rem ;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+.result h2{
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.result p{
+  color: hsl(217, 12%, 63%);
+  margin-bottom: 2rem;
+}
+
+.hidden{
+  display: none;
+}
+
+.attribution{
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  margin-top: 2rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
